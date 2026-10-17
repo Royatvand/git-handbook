@@ -25,9 +25,9 @@ Git is easier to learn when you understand what each command changes and why it 
 ## What you'll learn
 
 - **Core concepts:** repositories, the working tree, the staging area, commits, and history
-- **Everyday workflow:** {tick}status{tick}, {tick}diff{tick}, {tick}add{tick}, {tick}commit{tick}, {tick}pull{tick}, and {tick}push{tick}
+- **Everyday workflow:** `status`, `diff`, `add`, `commit`, `pull`, and `push`
 - **Parallel work:** branches, merges, rebase, and conflict resolution
-- **Recovery tools:** {tick}restore{tick}, {tick}revert{tick}, {tick}reflog{tick}, {tick}bisect{tick}, and {tick}cherry-pick{tick}
+- **Recovery tools:** `restore`, `revert`, `reflog`, `bisect`, and `cherry-pick`
 - **Team collaboration:** remotes, pull requests, code review, and common branching workflows
 - **Advanced topics:** tags, submodules, hooks, and an introduction to GitHub Actions
 
@@ -35,22 +35,22 @@ Git is easier to learn when you understand what each command changes and why it 
 
 1. Read one section at a time; don't try to memorize every command.
 2. Create a disposable practice repository and run the examples there.
-3. Before changing or deleting anything, inspect the repository with {tick}git status{tick} and {tick}git diff{tick}.
+3. Before changing or deleting anything, inspect the repository with `git status` and `git diff`.
 4. Practise branches and merge conflicts with files you can safely recreate.
 5. Learn the difference between local history changes and changes already shared with others.
 
-> **Safety note:** Commands such as {tick}git reset --hard{tick}, {tick}git clean -fd{tick}, and force-push can discard work or affect collaborators. Understand the consequences before running them, and avoid experimenting on a project that contains work you cannot lose.
+> **Safety note:** Commands such as `git reset --hard`, `git clean -fd`, and force-push can discard work or affect collaborators. Understand the consequences before running them, and avoid experimenting on a project that contains work you cannot lose.
 
 ## Repository structure
 
-{tick}{tick}{tick}text
+```text
 git-handbook/
 ├── README.md
 ├── README.fa.md
 ├── Git-Zero-to-Hero-EN.md
 ├── Git-Zero-to-Hero-FA.md
 └── CONTRIBUTING.md
-{tick}{tick}{tick}
+```
 
 ## Who is this for?
 
