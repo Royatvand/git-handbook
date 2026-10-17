@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/git-handbook-banner.svg" alt="Git Handbook — bilingual English and Persian guide to Git" width="100%" />
+<img src="./assets/git-handbook-banner.svg" alt="Git Handbook — bilingual English and Persian guide to Git" width="900" />
 
 **A practical, step-by-step guide to Git — from your first commit to advanced workflows.**
 
