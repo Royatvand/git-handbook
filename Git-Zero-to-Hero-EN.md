@@ -78,7 +78,7 @@ Useful settings:
     git config --list
     git config user.name
 
-The {tick}--global{tick} flag applies to your user account. Omit it when you want a setting to apply only to the current repository.
+The `--global` flag applies to your user account. Omit it when you want a setting to apply only to the current repository.
 
 ## 3. Core concepts
 
@@ -100,7 +100,7 @@ Create a new project:
     git init
     git status
 
-Create a file named {tick}README.md{tick}, then stage and commit it:
+Create a file named `README.md`, then stage and commit it:
 
     git add README.md
     git commit -m "docs: add project introduction"
@@ -110,7 +110,7 @@ To copy an existing remote repository:
     git clone https://github.com/OWNER/REPOSITORY.git
     cd REPOSITORY
 
-Replace the URL with the actual repository address. If the project already exists locally, do not run {tick}git init{tick} blindly in a directory that belongs to another repository.
+Replace the URL with the actual repository address. If the project already exists locally, do not run `git init` blindly in a directory that belongs to another repository.
 
 ## 5. The daily workflow
 
@@ -122,7 +122,7 @@ A simple, dependable routine:
     git diff --staged
     git commit -m "Describe the change"
 
-Stage a specific file when possible rather than automatically staging every change. Use {tick}git add -p{tick} to select parts of a file interactively.
+Stage a specific file when possible rather than automatically staging every change. Use `git add -p` to select parts of a file interactively.
 
 A commit should represent one meaningful unit of work. Smaller, focused commits are easier to review and, if necessary, revert.
 
@@ -135,7 +135,7 @@ A commit should represent one meaningful unit of work. Smaller, focused commits 
     git log --oneline --graph --decorate --all
     git show <commit>
 
-{tick}git diff{tick} shows unstaged changes; {tick}git diff --staged{tick} shows what will be included in the next commit. {tick}git show{tick} displays a commit and the changes it introduced.
+`git diff` shows unstaged changes; `git diff --staged` shows what will be included in the next commit. `git show` displays a commit and the changes it introduced.
 
 To see who last changed each line of a tracked file:
 
@@ -145,7 +145,7 @@ Use blame to investigate context, not to assign blame to a person.
 
 ## 7. Ignore files with .gitignore
 
-A {tick}.gitignore{tick} file tells Git which **untracked** files it should normally ignore. Typical entries include:
+A `.gitignore` file tells Git which **untracked** files it should normally ignore. Typical entries include:
 
     node_modules/
     dist/
@@ -185,7 +185,7 @@ A hard reset discards staged and working-tree changes that are not preserved els
 
     git reset --hard <commit>
 
-Do not use {tick}reset --hard{tick} as a routine cleanup command. Check {tick}git status{tick} and back up important work first. For a commit already shared with a team, prefer {tick}git revert{tick} unless the team has explicitly agreed to rewrite history.
+Do not use `reset --hard` as a routine cleanup command. Check `git status` and back up important work first. For a commit already shared with a team, prefer `git revert` unless the team has explicitly agreed to rewrite history.
 
 ## 9. Branches
 
@@ -201,7 +201,7 @@ To switch to an existing branch:
 
     git switch main
 
-Older tutorials often use {tick}git checkout{tick} for switching and creating branches. {tick}git switch{tick} is a clearer command when you only want to switch branches. Deleting a local branch does not delete a remote branch.
+Older tutorials often use `git checkout` for switching and creating branches. `git switch` is a clearer command when you only want to switch branches. Deleting a local branch does not delete a remote branch.
 
 ## 10. Merge branches
 
@@ -228,7 +228,7 @@ Edit the file so it contains the intended final result, and remove the conflict 
     git add path/to/resolved-file
     git commit
 
-For a merge, Git may ask you to commit the resolution. For a rebase, continue with {tick}git rebase --continue{tick} after staging the resolved files. Never delete conflict markers without checking which changes should be retained.
+For a merge, Git may ask you to commit the resolution. For a rebase, continue with `git rebase --continue` after staging the resolved files. Never delete conflict markers without checking which changes should be retained.
 
 ## 12. Rebase
 
@@ -265,7 +265,7 @@ A remote is a named connection to another Git repository.
     git remote show origin
     git remote set-url origin https://github.com/OWNER/NEW-REPOSITORY.git
 
-{tick}origin{tick} is only a conventional name; it is not a special requirement. Use the real URL for your repository and avoid embedding credentials in remote URLs.
+`origin` is only a conventional name; it is not a special requirement. Use the real URL for your repository and avoid embedding credentials in remote URLs.
 
 ## 14. Clone, fetch, pull, and push
 
@@ -285,7 +285,7 @@ Publish the current branch and set its upstream:
 
     git push -u origin feature/profile-page
 
-Conceptually, {tick}fetch{tick} updates your knowledge of the remote, {tick}pull{tick} fetches and integrates changes, and {tick}push{tick} sends your local commits to a remote. Review what you are pushing and do not force-push shared branches without agreement.
+Conceptually, `fetch` updates your knowledge of the remote, `pull` fetches and integrates changes, and `push` sends your local commits to a remote. Review what you are pushing and do not force-push shared branches without agreement.
 
 ## 15. Stash temporary changes
 
@@ -296,7 +296,7 @@ Stash puts selected working changes aside so you can switch tasks.
     git stash show -p
     git stash pop
 
-{tick}pop{tick} reapplies and removes the selected stash if it applies successfully. {tick}apply{tick} reapplies changes without removing the stash. Stash is temporary storage, not a durable backup.
+`pop` reapplies and removes the selected stash if it applies successfully. `apply` reapplies changes without removing the stash. Stash is temporary storage, not a durable backup.
 
 ## 16. Tags and releases
 
@@ -331,7 +331,7 @@ Create a recovery branch before trying more destructive operations. Reflog entri
 
 ## 19. Find a bug with bisect
 
-{tick}git bisect{tick} uses binary search through commits to find the change that introduced a bug. Start with a known-bad and known-good commit:
+`git bisect` uses binary search through commits to find the change that introduced a bug. Start with a known-bad and known-good commit:
 
     git bisect start
     git bisect bad
@@ -389,7 +389,7 @@ A commonly used Conventional Commits format is:
 
     <type>(optional-scope): short description
 
-Common types include {tick}feat{tick}, {tick}fix{tick}, {tick}docs{tick}, {tick}test{tick}, {tick}refactor{tick}, and {tick}chore{tick}. A project may define its own convention; consistency matters more than blindly following a template.
+Common types include `feat`, `fix`, `docs`, `test`, `refactor`, and `chore`. A project may define its own convention; consistency matters more than blindly following a template.
 
 ## 24. Team workflows
 
@@ -408,7 +408,7 @@ A pull request (PR) proposes changes and gives teammates a place to discuss and 
 Before opening a PR:
 
 1. Sync with the project's target branch using its agreed workflow.
-2. Review {tick}git diff{tick} and {tick}git status{tick}.
+2. Review `git diff` and `git status`.
 3. Run relevant tests, linting, and builds.
 4. Explain the reason for the change and how it was tested.
 
@@ -416,7 +416,7 @@ In review, prioritize correctness, security, readability, maintainability, and c
 
 ## 26. GitHub Actions basics
 
-GitHub Actions can run automated checks when commits are pushed or pull requests are opened. Workflow files are YAML files stored under {tick}.github/workflows/{tick}. A minimal example for a documentation repository could be:
+GitHub Actions can run automated checks when commits are pushed or pull requests are opened. Workflow files are YAML files stored under `.github/workflows/`. A minimal example for a documentation repository could be:
 
     name: Markdown checks
     on:
@@ -452,7 +452,7 @@ Remove untracked files and directories **after previewing them**:
     git clean -nd
     git clean -fd
 
-The first command previews what would be removed; the second actually removes it. Be cautious with {tick}git clean{tick}, especially when using options that include ignored files.
+The first command previews what would be removed; the second actually removes it. Be cautious with `git clean`, especially when using options that include ignored files.
 
 Inspect remote settings:
 
@@ -461,34 +461,34 @@ Inspect remote settings:
 
 ## 28. Common problems
 
-**A file does not appear on GitHub.** Check {tick}git status{tick}, make sure the file is not ignored, stage it, commit it, and push the correct branch.
+**A file does not appear on GitHub.** Check `git status`, make sure the file is not ignored, stage it, commit it, and push the correct branch.
 
 **Push is rejected.** Fetch the remote changes, integrate them using your project's workflow, resolve any conflicts, then push again. Do not immediately force-push.
 
-**The wrong commit was made.** If it is local and not shared, inspect your state before choosing {tick}reset{tick}. If it is already shared, {tick}revert{tick} is usually safer.
+**The wrong commit was made.** If it is local and not shared, inspect your state before choosing `reset`. If it is already shared, `revert` is usually safer.
 
 **A secret was committed.** Revoke or rotate it first. Removing it from the latest version does not erase it from repository history. Follow the hosting provider's guidance for sensitive-data removal if history must also be cleaned.
 
-**A commit was made on the wrong branch.** Do not panic. Inspect {tick}git status{tick} and the commit graph, create a branch to preserve the commit if needed, then move changes carefully. Avoid reset commands until you understand exactly what will move or be discarded.
+**A commit was made on the wrong branch.** Do not panic. Inspect `git status` and the commit graph, create a branch to preserve the commit if needed, then move changes carefully. Avoid reset commands until you understand exactly what will move or be discarded.
 
 ## 29. Command cheat sheet
 
 | Goal | Command |
 |---|---|
-| Check repository state | {tick}git status{tick} |
-| Stage a file | {tick}git add path{tick} |
-| Create a commit | {tick}git commit -m "message"{tick} |
-| Review unstaged edits | {tick}git diff{tick} |
-| Review staged edits | {tick}git diff --staged{tick} |
-| View compact history | {tick}git log --oneline{tick} |
-| Create and switch branch | {tick}git switch -c branch-name{tick} |
-| Switch branch | {tick}git switch branch-name{tick} |
-| Merge a branch | {tick}git merge branch-name{tick} |
-| Fetch remote changes | {tick}git fetch origin{tick} |
-| Push branch | {tick}git push{tick} |
-| Show remotes | {tick}git remote -v{tick} |
-| Temporarily save work | {tick}git stash push{tick} |
-| Undo a public commit | {tick}git revert commit{tick} |
+| Check repository state | `git status` |
+| Stage a file | `git add path` |
+| Create a commit | `git commit -m "message"` |
+| Review unstaged edits | `git diff` |
+| Review staged edits | `git diff --staged` |
+| View compact history | `git log --oneline` |
+| Create and switch branch | `git switch -c branch-name` |
+| Switch branch | `git switch branch-name` |
+| Merge a branch | `git merge branch-name` |
+| Fetch remote changes | `git fetch origin` |
+| Push branch | `git push` |
+| Show remotes | `git remote -v` |
+| Temporarily save work | `git stash push` |
+| Undo a public commit | `git revert commit` |
 
 ## 30. Suggested learning path
 
@@ -502,7 +502,7 @@ Create a feature branch, merge it, clone a repository, fetch changes, and push a
 Practise a merge conflict, use stash, recover a reference with reflog, and reverse a commit with revert in a disposable repository.
 
 ### Final practice project
-1. Create a repository with a README and a {tick}.gitignore{tick}.
+1. Create a repository with a README and a `.gitignore`.
 2. Commit the initial structure.
 3. Create a feature branch and make a focused change.
 4. Merge it into the main branch.
