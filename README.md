@@ -1,8 +1,8 @@
 <div align="center">
 
-# Git Handbook
+<img src="./assets/git-handbook-banner.svg" alt="Git Handbook — bilingual English and Persian guide to Git" width="100%" />
 
-**Learn Git by understanding the workflow — from your first commit to collaboration and recovery.**
+**A practical, step-by-step guide to Git — from your first commit to advanced workflows.**
 
 [English guide](./Git-Zero-to-Hero-EN.md) · [راهنمای فارسی](./Git-Zero-to-Hero-FA.md) · [Persian project overview](./README.fa.md) · [Contributing](./CONTRIBUTING.md)
 
