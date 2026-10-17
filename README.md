@@ -2,90 +2,74 @@
 
 # Git Handbook
 
-**A practical, step-by-step guide to Git — from the first commit to advanced workflows.**
+**Learn Git by understanding the workflow — from your first commit to collaboration and recovery.**
 
-[فارسی](#راهنمای-فارسی) · [What You'll Learn](#what-youll-learn) · [Getting Started](#getting-started) · [Contributing](#contributing)
+[English guide](./Git-Zero-to-Hero-EN.md) · [راهنمای فارسی](./Git-Zero-to-Hero-FA.md) · [Persian project overview](./README.fa.md) · [Contributing](./CONTRIBUTING.md)
 
 </div>
 
 ---
 
-## About the Project
+## Why this handbook?
 
-**Git Handbook** is a learning resource for developers who want to understand Git beyond memorizing commands. It combines clear explanations, practical command-line examples, safer workflows, and a progression from fundamentals to collaborative development.
+Git is easier to learn when you understand what each command changes and why it matters. This handbook focuses on practical workflows, readable examples, safe recovery techniques, and the habits developers use when working together.
 
-The repository currently includes a **comprehensive Persian-language guide**. The structure is intended to support additional language editions and practical learning resources over time.
+## Choose your language
 
-## What You'll Learn
+| Resource | Language | Description |
+|---|---|---|
+| [Git: Zero to Hero](./Git-Zero-to-Hero-EN.md) | English | A structured, 30-section guide from the fundamentals to advanced workflows |
+| [آموزش جامع Git از صفر تا حرفه‌ای](./Git-Zero-to-Hero-FA.md) | فارسی | راهنمای کامل فارسی با مثال‌های عملی، عیب‌یابی و برگه‌ی تقلب |
+| [نمای کلی پروژه](./README.fa.md) | فارسی | معرفی پروژه، مسیر یادگیری و روش مشارکت |
 
-- Git fundamentals and the difference between Git and GitHub
-- Installation, identity configuration, and repository setup
-- The working directory, staging area, commits, and project history
-- Inspecting changes with `diff`, `log`, and `blame`
-- Branching, merging, rebasing, and resolving conflicts
-- Remotes and the `clone`, `fetch`, `pull`, and `push` workflow
-- Recovery and maintenance tools such as `stash`, `reflog`, `bisect`, and `cherry-pick`
-- Commit message conventions, pull requests, and code review
-- Git hooks and an introduction to GitHub Actions / CI
+## What you'll learn
 
-## Getting Started
+- **Core concepts:** repositories, the working tree, the staging area, commits, and history
+- **Everyday workflow:** {tick}status{tick}, {tick}diff{tick}, {tick}add{tick}, {tick}commit{tick}, {tick}pull{tick}, and {tick}push{tick}
+- **Parallel work:** branches, merges, rebase, and conflict resolution
+- **Recovery tools:** {tick}restore{tick}, {tick}revert{tick}, {tick}reflog{tick}, {tick}bisect{tick}, and {tick}cherry-pick{tick}
+- **Team collaboration:** remotes, pull requests, code review, and common branching workflows
+- **Advanced topics:** tags, submodules, hooks, and an introduction to GitHub Actions
 
-### Persian guide
+## Recommended learning path
 
-Read the full guide here:
+1. Read one section at a time; don't try to memorize every command.
+2. Create a disposable practice repository and run the examples there.
+3. Before changing or deleting anything, inspect the repository with {tick}git status{tick} and {tick}git diff{tick}.
+4. Practise branches and merge conflicts with files you can safely recreate.
+5. Learn the difference between local history changes and changes already shared with others.
 
-**[📘 آموزش جامع Git از صفر تا حرفه‌ای — راهنمای فارسی](./Git-Zero-to-Hero-FA.md)**
+> **Safety note:** Commands such as {tick}git reset --hard{tick}, {tick}git clean -fd{tick}, and force-push can discard work or affect collaborators. Understand the consequences before running them, and avoid experimenting on a project that contains work you cannot lose.
 
-It covers 30 sections, from the first repository to advanced Git concepts, troubleshooting, a command cheat sheet, and a suggested learning path.
+## Repository structure
 
-### Recommended way to use this handbook
-
-1. Read one topic at a time.
-2. Run the commands in a disposable practice repository.
-3. Use `git status` and `git diff` before committing or undoing changes.
-4. Practice branching and conflict resolution instead of only reading about them.
-5. Be especially careful with history-rewriting or destructive commands such as `git reset --hard` and `git clean`.
-
-## Repository Structure
-
-```text
+{tick}{tick}{tick}text
 git-handbook/
 ├── README.md
-└── Git-Zero-to-Hero-FA.md
-```
+├── README.fa.md
+├── Git-Zero-to-Hero-EN.md
+├── Git-Zero-to-Hero-FA.md
+└── CONTRIBUTING.md
+{tick}{tick}{tick}
 
-## Who Is This For?
+## Who is this for?
 
-- Beginners learning Git for the first time
-- Frontend and backend developers who want a reliable command-line workflow
-- Students building projects for a portfolio
-- Developers who need a quick reference for everyday Git tasks
+Beginners, students, and frontend or backend developers who want a dependable Git workflow and a practical reference they can return to while building projects.
 
 ## Contributing
 
-Suggestions, corrections, examples, and improvements are welcome. Before submitting a change:
+Found a typo, unclear explanation, or a command that could be safer? Contributions are welcome. Please read the [contribution guidelines](./CONTRIBUTING.md) before opening an issue or pull request.
 
-- Explain the problem or improvement clearly.
-- Keep examples reproducible and safe to run.
-- Prefer focused changes that improve clarity or correctness.
-- Never include credentials, access tokens, private keys, or other secrets.
+## Official references
 
-You can open an Issue to discuss a proposed improvement or submit a Pull Request with the change.
+- [Git documentation](https://git-scm.com/doc)
+- [Pro Git book](https://git-scm.com/book/en/v2)
+- [GitHub Docs](https://docs.github.com/)
 
-## Language
+## Maintainer
 
-### راهنمای فارسی
-
-این مخزن با هدف ارائه‌ی یک مرجع آموزشی کاربردی برای یادگیری Git ساخته شده است. نسخه‌ی فعلی آموزش به زبان فارسی است؛ ساختار پروژه قابلیت گسترش به زبان‌های دیگر را نیز دارد.
-
-**[ورود به آموزش کامل فارسی](./Git-Zero-to-Hero-FA.md)**
-
-## Author
-
-Created and maintained by **[Royatvand](https://github.com/Royatvand)**.
+Created and maintained by [Royatvand](https://github.com/Royatvand).
 
 ---
 
-<p align="center">
-  <sub>Learn the concepts. Practice the commands. Build safer workflows.</sub>
-</p>
+<div align="center"><sub>Understand the workflow. Practise safely. Keep your history useful.</sub></div>
